@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC|Teko:300');
+
+@import 'variables';
+
+body {
+  background: $color-navy;
+  color: $color-grey--light;
+  font-family: "Teko", sans-serif;
+  font-size: 24px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+
+  &__header {
+    background: $color-navy--light;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-content: center;
+  }
+
+  &__footer {
+    background: $color-navy--dark;
+  }
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 20rem;
+  padding: 0 1rem;
+}
+
+button {
+  background: $color-yellow;
+  border: none;
+  border-radius: 3px;
+  color: $color-navy;
+  font-size: 24px;
+  font-weight: 700;
+  outline: none;
+  padding: 0.25rem 0.5rem;
+}
+
+
+input {
+  background: none;
+  border: none;
+  color: $color-grey--light;
+  font-size: 24px;
+  font-family: "Teko", sans-serif;
+}
