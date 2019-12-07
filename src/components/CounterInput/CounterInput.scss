@@ -1,13 +1,33 @@
 @import '../../variables';
 
 .counter-input {
+
+  @include weightsFont;
+
   color: $color-grey--light;
-  display: flex;
-  font-family: "Holtwood One SC", serif;
+  display: grid;
+  grid-template-columns: 8rem 12rem;
   justify-content: space-between;
   padding: 0.75rem 0;
+  width: 13.75rem;
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+    text-align: right;
+  }
+
+  button {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+  
 
   input {
+    font-size: 28px;
+    line-height: 1;
     text-align: center;
     width: 3rem;
   }

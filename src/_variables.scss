@@ -4,3 +4,18 @@ $color-grey--dark: #C0C0C0;
 $color-navy--dark: #011D2D;
 $color-navy: #053F5E;
 $color-navy--light: #115173;
+$color-white: #FFF;
+
+@mixin weightsFont() {
+  color: $color-grey--light;
+  font-family: "Holtwood One SC", serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+@mixin calloutFont() {
+  font-family: "Teko", sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 125%;
+}

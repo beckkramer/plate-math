@@ -38,10 +38,10 @@ class CounterInput extends Component {
   render() {
     return (
       <label className="counter-input">
-        <div>
-          {this.props.weight}lbs.
+        <div className="counter-input__label">
+          {this.props.weight} lbs
         </div>
-        <div>
+        <div className="counter-input__input-set">
           <button onClick={this.decreaseValue}>
             <Minus />
           </button>

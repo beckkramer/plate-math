@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC|Teko:300');
+@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC|Teko:400|Patua+One');
 
 @import 'variables';
 
 body {
   background: $color-navy;
   color: $color-grey--light;
-  font-family: "Teko", sans-serif;
+  @include calloutFont;
   font-size: 24px;
+}
+
+p {
+  margin: 1rem 0;
 }
 
 .App {
@@ -27,14 +31,27 @@ body {
   }
 
   &__footer {
+
+    @include calloutFont;
+
+    align-items: center;
     background: $color-navy--dark;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0;
+    text-transform: uppercase;
   }
 }
 
 .content {
   margin: 0 auto;
-  max-width: 20rem;
+  max-width: 22rem;
   padding: 0 1rem;
+}
+
+.giant {
+  font-size: 44px;
+  padding: 0 0.5rem;
 }
 
 button {
@@ -46,13 +63,35 @@ button {
   font-weight: 700;
   outline: none;
   padding: 0.25rem 0.5rem;
+
+  &:focus {
+    border-radius: 3px;
+    outline: 6px solid $color-navy--dark;
+  }
 }
 
+.bar-set {
+  
+  @include weightsFont;
+
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 18rem;
+
+  &__weight {
+    margin: 0 0.5rem;
+  }
+}
 
 input {
+
+  @include calloutFont;
+
   background: none;
   border: none;
   color: $color-grey--light;
   font-size: 24px;
-  font-family: "Teko", sans-serif;
 }

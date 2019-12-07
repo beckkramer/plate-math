@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.scss';
-import './logo.svg';
+import './assets/Logo.svg';
 
 import CounterInput from './components/CounterInput/CounterInput.jsx'
+
 
 class App extends Component {
 
@@ -57,31 +58,35 @@ class App extends Component {
       <div className="App">
 
         <header className="App__header">
-
+          <img src="Logo.svg" alt="Plate Math" />
         </header>
         <main className="App__main content">
 
-          Pick bar weight: 
-          
-          <label>
-            <input name="bar" onChange={this.updateBarTotal} type="radio" value="35" />
-            35 lbs
-          </label>
-          <label>
-            <input name="bar" onChange={this.updateBarTotal} type="radio" value="45" />
-            45 lbs
-          </label>
+          Pick a bar weight: 
 
-          <p>Add the number of plates put on just one side of the bar:</p>
+          <div className="bar-set">
+            <label className="bar-set__weight">
+              <input name="bar" onChange={this.updateBarTotal} type="radio" value="35" />
+              35 lbs
+            </label>
+            <label className="bar-set__weight">
+              <input name="bar" onChange={this.updateBarTotal} type="radio" value="45" />
+              45 lbs
+            </label>
+          </div>
+
+          <p>Add the # of plates on one side of the bar:</p>
 
           <CounterInput updateTotal={this.updatePlateTotal} weight={2.5} />
           <CounterInput updateTotal={this.updatePlateTotal} weight={5} />
           <CounterInput updateTotal={this.updatePlateTotal} weight={10} />
           <CounterInput updateTotal={this.updatePlateTotal} weight={15} />
           <CounterInput updateTotal={this.updatePlateTotal} weight={25} />
+          <CounterInput updateTotal={this.updatePlateTotal} weight={35} />
+          <CounterInput updateTotal={this.updatePlateTotal} weight={45} />
         </main>
         <footer className="App__footer">
-          Total Weight: {this.state.total}
+          Total Weight: <span className="giant">{this.state.total} lbs</span>
         </footer>
       </div>
     );
@@ -89,3 +94,4 @@ class App extends Component {
 }
 
 export default App;
+ 
